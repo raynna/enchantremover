@@ -44,7 +44,9 @@ public class EnchantRemoveEvents {
     public static void onAnvil(AnvilUpdateEvent event) {
         ItemStack left = event.getLeft();
         ItemStack right = event.getRight();
-
+        if (event.getPlayer().getPersistentData().contains("enchant_removed")) {//to make sure previous items are reset.
+            event.getPlayer().getPersistentData().remove("enchant_removed");
+        }
         if (left.isEmpty() || !right.is(Items.BOOK) || !left.isEnchanted()) {
             return;
         }

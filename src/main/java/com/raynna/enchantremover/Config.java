@@ -9,7 +9,7 @@ import net.neoforged.neoforge.common.ModConfigSpec;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths; 
+import java.nio.file.Paths;
 
 import static com.raynna.enchantremover.EnchantRemover.MOD_ID;
 
